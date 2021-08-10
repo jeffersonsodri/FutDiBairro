@@ -10,8 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "expo-cli": "^4.10.0",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-gesture-handler": "^1.10.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
