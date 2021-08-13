@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "appFootballSoccer",
+    "slug": "appFootballSoccer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/bolamancha.jpg",
+    "splash": {
+      "image": "./assets/bola.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#00FF9A"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": ""
+  }
+}
