@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Container,
@@ -11,29 +11,51 @@ import {
 } from "./styles";
 import { Image, StyleSheet } from "react-native";
 import SignInput from "../../components/SignInput";
-import EmailIcon from "../../assets/email.svg"
-import LockIcon from "../../assets/lock.svg"
+import EmailIcon from "../../assets/email.svg";
+import LockIcon from "../../assets/lock.svg";
 import { useNavigation } from "@react-navigation/native";
 
 export default () => {
+  const navigation = useNavigation();
+  const [emailField, setEmailField] = useState("jeffersoncacula@gmail.com");
+  const [passowordField, setPassowordField] = useState("");
 
-  const navigation = useNavigation(); 
+  const handleMessageBottomClick = () => {
+    navigation.reset({
+      routes: [{ name: "SingUp" }],
+    });
+  }
+
+  const hangleSignClick = () => {
+    
+  }
 
   return (
     <Container>
       <Image style={styles.imagem} source={require("../../assets/bola.png")} />
       <InputArea>
-        <SignInput IconSvg={EmailIcon} />
-        <SignInput IconSvg={LockIcon} />
+        <SignInput
+          IconSvg={EmailIcon}
+          placeholder="Digite seu Email"
+          value={emailField}
+          onChangeText={(t) => setEmailField(t)}
+        />
+        <SignInput
+          IconSvg={LockIcon}
+          placeholder="Digite sua senha"
+          value={passowordField}
+          onChangeText={(t) => setPassowordField(t)}
+          passoword={true}
+        />
 
-        <CustomButton>
+        <CustomButton onPress={hangleSignClick}>
           <CustomButtonText>LOGIN</CustomButtonText>
         </CustomButton>
       </InputArea>
 
       <SignMessageText>Ainda não possui uma conta?</SignMessageText>
       <SignMessageButton>
-        <SignMessageButtonBold onPress={() => navigation.navigate("SingUp")}>
+        <SignMessageButtonBold onPress={handleMessageBottomClick}>
           Cadastre-se agora
         </SignMessageButtonBold>
       </SignMessageButton>
@@ -46,6 +68,5 @@ const styles = StyleSheet.create({
     width: 160,
     height: 160,
     marginTop: -110,
-
   },
 });
