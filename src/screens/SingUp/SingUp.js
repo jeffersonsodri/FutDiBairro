@@ -18,13 +18,13 @@ import { useNavigation } from "@react-navigation/native";
 
 export default () => {
   const navigation = useNavigation();
-  const [emailField, setEmailField] = useState("jeffersoncacula@gmail.com");
+  const [emailField, setEmailField] = useState("");
   const [passowordField, setPassowordField] = useState("");
   const [nameField, setNameField] = useState("");
 
   const handleMessageBottomClick = () => {
     navigation.reset({
-      routes: [{ name: "SingUp" }],
+      routes: [{ name: "SingIn" }],
     });
   };
 
@@ -59,12 +59,12 @@ export default () => {
         </CustomButton>
       </InputArea>
 
-      {/* <SignMessageText>Ainda não possui uma conta?</SignMessageText>
+      <SignMessageText>Já possui uma conta?</SignMessageText>
       <SignMessageButton>
         <SignMessageButtonBold onPress={handleMessageBottomClick}>
-          Cadastre-se agora
+          Faça o Login
         </SignMessageButtonBold>
-      </SignMessageButton> */}
+      </SignMessageButton>
     </Container>
   );
 };

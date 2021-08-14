@@ -17,7 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 
 export default () => {
   const navigation = useNavigation();
-  const [emailField, setEmailField] = useState("jeffersoncacula@gmail.com");
+  const [emailField, setEmailField] = useState("");
   const [passowordField, setPassowordField] = useState("");
 
   const handleMessageBottomClick = () => {
