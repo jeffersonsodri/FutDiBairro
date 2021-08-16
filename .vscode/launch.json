@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendfutApplication<backendfut>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.futback.backendfut.BackendfutApplication",
+            "projectName": "backendfut",
+            "args": ""
+        }
+    ]
+}
