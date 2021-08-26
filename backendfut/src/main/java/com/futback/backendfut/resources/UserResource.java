@@ -7,21 +7,29 @@ import com.futback.backendfut.services.UserServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-@RequestMapping(value = "/usuarios")
+@RequestMapping(value = "/users")
 public class UserResource {
     
     @Autowired
     private UserServices service;
 
-    // @RequestMapping(method = RequestMethod.GET)
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<User>> findAll(){
         List<User> lista = service.findAll();
         return ResponseEntity.ok().body(lista);
     }
+
+
+    // @PostMapping(value="path")
+    // public User postMethodName(@RequestBody User entity) {
+        
+    //     return entity;
+    // }
+    
 }
