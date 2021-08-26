@@ -10,13 +10,14 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id 
+    @Id
     private String Id;
     private String name;
     private String apelido;
     private String email;
 
-    public User(){}
+    public User() {
+    }
 
     public User(String id, String name, String apelido, String email) {
         Id = id;
@@ -24,6 +25,7 @@ public class User implements Serializable {
         this.apelido = apelido;
         this.email = email;
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -80,6 +82,5 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
 }
