@@ -4,10 +4,13 @@ import java.io.Serializable;
 
 import com.futback.backendfut.models.User;
 
+import org.springframework.data.annotation.Id;
+
 public class UserDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private String id;
     private String name;
     private String apelido;
@@ -17,10 +20,10 @@ public class UserDTO implements Serializable {
     }
 
     public UserDTO(User obj) {
-        obj.setId(id);
-        obj.setName(name);
-        obj.setApelido(apelido);
-        obj.setEmail(email);
+        this.id = obj.getId();
+        this.name = obj.getName();
+        this.apelido = obj.getApelido();
+        this.email = obj.getEmail();
     }
 
     public String getId() {
