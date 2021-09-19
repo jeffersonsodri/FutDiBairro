@@ -2,3 +2,5 @@ appFutdiBairro
 
 node_modules/
 /.metadata/
+
+.vscode

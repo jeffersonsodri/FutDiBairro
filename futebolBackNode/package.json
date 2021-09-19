@@ -1,0 +1,30 @@
+{
+  "name": "FutDiBairro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-generate": "^1.0.12",
+    "mongoose": "^6.0.6",
+    "nodemon": "^2.0.12",
+    "yarn": "^1.22.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonsodri/FutDiBairro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersonsodri/FutDiBairro/issues"
+  },
+  "homepage": "https://github.com/jeffersonsodri/FutDiBairro#readme"
+}
